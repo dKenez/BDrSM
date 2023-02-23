@@ -129,14 +129,34 @@ void step2()
   sound.say(". Step two finished.");
 }
 
+void step3()
+{
+  sound.say(". Step three.", 0.3);
+  // remove old mission
+  bridge.tx("regbot mclear\n");
+  // clear events received from last mission
+  event.clearEvents();
+  
+  bool gotNewestFrame = vision.processImage(3);
+  
+  // start this mission
+  bridge.tx("regbot start\n");
+  // wait until finished
+  //
+  cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
+  event.waitForEvent(0);
+//   sound.say(". Step one finished.");
+}
+
 int main(int argc, char **argv) 
 {
   if (setup(argc, argv))
   { // start mission
     std::cout << "# Robobot mission starting ...\n";
     //
-    step1();
-    step2();
+    // step1();
+    // step2();
+    step3();
     //
     std::cout << "# Robobot mission finished ...\n";
     // remember to close camera
