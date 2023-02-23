@@ -35,5 +35,7 @@
 /mission/build/
 
 # vscode files
-/vscode/
 /.vscode/
+
+# images
+/images/
