@@ -33,6 +33,7 @@
 
 # Executables
 /mission/build/
+/build/
 
 # vscode files
 /.vscode/
