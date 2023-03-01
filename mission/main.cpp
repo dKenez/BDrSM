@@ -24,6 +24,7 @@
 #include "src/ubridge.h"
 #include "src/uvision.h"
 #include "src/upose.h"
+#include "src/ulinesensor.h"
 #include "src/ucomment.h"
 #include "src/ustate.h"
 #include "src/uplay.h"
@@ -50,6 +51,7 @@ bool setup(int argc, char **argv)
     if (true or bridge.connected)
     { /// call setup for data structures
         pose.setup();
+        lineSensor.setup();
         comment.setup();
         state.setup();
         vision.setup(argc, argv);
