@@ -148,7 +148,9 @@ void step3()
 
 void step4()
 {
-    sound.say(". Step four.", 0.3);
+    cout << "Step 4\n";
+
+    // sound.say(". Step four.", 0.3);
     // remove old mission
     bridge.tx("regbot mclear\n");
     // clear events received from last mission
