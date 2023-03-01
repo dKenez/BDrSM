@@ -158,7 +158,7 @@ void step4()
 
     // start this mission
     bridge.tx("regbot:# liwi\n");
-    bridge.tx("regbot liwi\n");
+    bridge.tx("regbot sub liwi 30\n");
     // wait until finished
     //
     //   cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
