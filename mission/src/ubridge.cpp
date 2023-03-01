@@ -48,7 +48,7 @@ void UBridge::decode(char *msg)
     }
     else if (state.decode(msg))
     {
-        std::cout << "pose decode worked" << msg << "\n";
+        std::cout << "state decode worked" << msg << "\n";
     }
     else if (event.decode(msg))
     {
