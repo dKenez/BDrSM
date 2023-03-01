@@ -157,7 +157,7 @@ void step4()
     event.clearEvents();
 
     // start this mission
-    bridge.tx("regbot liwi\n");
+    bridge.tx("regbot:# liwi\n");
     // wait until finished
     //
     //   cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
