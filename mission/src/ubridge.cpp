@@ -40,23 +40,23 @@ void UBridge::decode(char *msg)
 { /// ask all if they can use this message
     if (comment.decode(msg))
     {
-        std::cout << "comment decode worked" << msg << "\n";
+        std::cout << "comment decode worked: " << msg << "\n";
     }
     else if (pose.decode(msg))
     {
-        std::cout << "pose decode worked" << msg << "\n";
+        std::cout << "pose decode worked: " << msg << "\n";
     }
     else if (state.decode(msg))
     {
-        std::cout << "state decode worked" << msg << "\n";
+        std::cout << "state decode worked: " << msg << "\n";
     }
     else if (event.decode(msg))
     {
-        std::cout << "event decode worked" << msg << "\n";
+        std::cout << "event decode worked: " << msg << "\n";
     }
     else if (joy.decode(msg))
     {
-        std::cout << "joy decode worked" << msg << "\n";
+        std::cout << "joy decode worked: " << msg << "\n";
     }
     else
         printf("Received, but not used: %s\n", msg);
