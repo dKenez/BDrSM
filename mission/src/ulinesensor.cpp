@@ -25,8 +25,8 @@
 
 #include <string>
 #include <string.h>
-#include "ubridge.h"
 #include "ulinesensor.h"
+#include "ubridge.h"
 
 // create
 ULineSensor lineSensor;
