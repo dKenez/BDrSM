@@ -28,6 +28,7 @@
 #include "ubridge.h"
 #include "upose.h"
 #include "ulinesensor.h"
+#include "uirsensor.h"
 #include "ucomment.h"
 #include "ustate.h"
 #include "uvision.h"
@@ -50,6 +51,10 @@ void UBridge::decode(char *msg)
     else if (lineSensor.decode(msg))
     {
         std::cout << "lineSensor decode worked: " << msg << "\n";
+    }
+     else if (irSensor.decode(msg))
+    {
+        std::cout << "irSensor decode worked: " << msg << "\n";
     }
     else if (state.decode(msg))
     {
