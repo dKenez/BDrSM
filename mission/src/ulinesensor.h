@@ -20,8 +20,8 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE. */
 
-#ifndef UPOSE_H
-#define UPOSE_H
+#ifndef ULINESENSOR_H
+#define ULINESENSOR_H
 
 #include <iostream>
 #include <sys/time.h>
@@ -40,7 +40,7 @@
 using namespace std;
 // forward declaration
 
-class UPose
+class ULineSensor
 {
 
 public:
@@ -52,18 +52,20 @@ public:
 
 public:
     /// x (forward), y (left), h (heading) in odometry coordinates
-    float x, y, h;
-    /// rotation around the y axis in radians
-    float tilt;
-    /// pose time from hardware (Regbot) in seconds
-    /// since start of hardware
-    double t;
+    int s1,
+        s2,
+        s3,
+        s4,
+        s5,
+        s6,
+        s7,
+        s8;
 
     mutex dataLock;
 };
 
 /**
  * Make this visible to the rest of the software */
-extern UPose pose;
+extern ULineSensor lineSensor;
 
 #endif
