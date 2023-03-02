@@ -24,6 +24,7 @@
 #include "src/ubridge.h"
 #include "src/uvision.h"
 #include "src/upose.h"
+#include "src/uirsensor.h"
 #include "src/ulinesensor.h"
 #include "src/ucomment.h"
 #include "src/ustate.h"
@@ -52,6 +53,7 @@ bool setup(int argc, char **argv)
     { /// call setup for data structures
         pose.setup();
         lineSensor.setup();
+        irSensor.setup();
         comment.setup();
         state.setup();
         vision.setup(argc, argv);
