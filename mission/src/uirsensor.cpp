@@ -34,6 +34,7 @@ UIrSensor irSensor;
 // Bridge class:
 void UIrSensor::setup()
 { /// subscribe to # information (debug text messages)
+    bridge.tx("regbot iron 1\n");
     bridge.tx("regbot:ir subscribe -1\n");
 }
 
