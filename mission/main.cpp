@@ -199,6 +199,7 @@ void linefollow()
                             6 * lineSensor.L6 - 250 +
                             7 * lineSensor.L7 - 250 +
                             8 * lineSensor.L8 - 250;
+        weightedAvg /= sum;
 
         if (weightedAvg >= 1 && weightedAvg < 3)
         {
