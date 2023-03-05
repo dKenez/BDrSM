@@ -161,7 +161,7 @@ void step4()
     event.clearEvents();
 
     // start this mission
-    bridge.tx("regbot:liw get\n");
+    bridge.tx("regbot:livn get\n");
     bridge.tx("regbot:ir get\n");
     // bridge.tx("regbot sub liwi 30\n");
     // wait until finished
