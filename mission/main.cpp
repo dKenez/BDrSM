@@ -58,7 +58,7 @@ bool setup(int argc, char **argv)
         state.setup();
         vision.setup(argc, argv);
         event.setup();
-        joy.setup() ;
+        joy.setup();
         printf("# Setup finished OK\n");
     }
     else

@@ -34,7 +34,7 @@ ULineSensor lineSensor;
 // Bridge class:
 void ULineSensor::setup()
 { /// subscribe to # information (debug text messages)
-    bridge.tx("regbot:liw subscribe -1\n");
+    bridge.tx("regbot:livn subscribe -1\n");
 }
 
 // regbot:liw 925 1090 1177 1113 1046 875 928 1114
@@ -44,26 +44,26 @@ bool ULineSensor::decode(char *msg)
     // from any source
     bool used = true;
     const char *p1 = strchrnul(msg, ':');
-    if (strncmp(p1, ":liw ", 5) == 0)
+    if (strncmp(p1, ":livn ", 6) == 0)
     { // decode line sensor message
 
         // advance to first parameter
-        if (strlen(p1) > 5)
-            p1 += 5;
+        if (strlen(p1) > 6)
+            p1 += 6;
         else
             return false;
 
         // get data
         dataLock.lock();
         // time in seconds
-        s1 = (int)strtol(p1, (char **)&p1, 10); // s1
-        s2 = (int)strtol(p1, (char **)&p1, 10); // s2
-        s3 = (int)strtol(p1, (char **)&p1, 10); // s3
-        s4 = (int)strtol(p1, (char **)&p1, 10); // s4
-        s5 = (int)strtol(p1, (char **)&p1, 10); // s5
-        s6 = (int)strtol(p1, (char **)&p1, 10); // s6
-        s7 = (int)strtol(p1, (char **)&p1, 10); // s7
-        s8 = (int)strtol(p1, (char **)&p1, 10); // s8
+        L1 = (int)strtol(p1, (char **)&p1, 10); // L1
+        L2 = (int)strtol(p1, (char **)&p1, 10); // L2
+        L3 = (int)strtol(p1, (char **)&p1, 10); // L3
+        L4 = (int)strtol(p1, (char **)&p1, 10); // L4
+        L5 = (int)strtol(p1, (char **)&p1, 10); // L5
+        L6 = (int)strtol(p1, (char **)&p1, 10); // L6
+        L7 = (int)strtol(p1, (char **)&p1, 10); // L7
+        L8 = (int)strtol(p1, (char **)&p1, 10); // L8
         dataLock.unlock();
     }
     else

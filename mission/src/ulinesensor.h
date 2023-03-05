@@ -52,14 +52,14 @@ public:
 
 public:
     /// x (forward), y (left), h (heading) in odometry coordinates
-    int s1,
-        s2,
-        s3,
-        s4,
-        s5,
-        s6,
-        s7,
-        s8;
+    int L1,
+        L2,
+        L3,
+        L4,
+        L5,
+        L6,
+        L7,
+        L8;
 
     mutex dataLock;
 };
