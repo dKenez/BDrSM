@@ -77,6 +77,14 @@ void step1()
     // clear events received from last mission
     event.clearEvents();
     // add mission lines
+    //following line mission
+    //thread=1
+    //vel=0.4: dist=0.1
+    //vel=0.6: lv=20,dist=0.5
+    //label=1,vel=0.8, edger=0.0, white=1: lv<4
+    //goto=2: IR1=0.5
+    //goto=1
+    //label=2,vel=0.0: time=0.3
     bridge.tx("regbot madd vel=0.2:time=1\n");
     bridge.tx("regbot madd tr=0.1:time=1,turn=-90\n");
     bridge.tx("regbot madd :time=1\n");
