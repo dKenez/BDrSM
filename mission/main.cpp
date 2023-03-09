@@ -258,10 +258,10 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        // step1();
+        step1();
         // step2();
         // step3();
-        step4();
+        // step4();
         //
         std::cout << "# Robobot mission finished ...\n";
         // remember to close camera
