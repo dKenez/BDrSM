@@ -25,45 +25,47 @@
 
 #include <string>
 #include <string.h>
-#include "ulinesensor.h"
+#include "uirsensor.h"
 #include "ubridge.h"
 
 // create
-ULineSensor lineSensor;
+UIrSensor irSensor;
 
 // Bridge class:
-void ULineSensor::setup()
+void UIrSensor::setup()
 { /// subscribe to # information (debug text messages)
-    bridge.tx("regbot:livn subscribe -1\n");
+    bridge.tx("regbot iron 1\n");
+    bridge.tx("regbot:ir subscribe -1\n");
 }
 
 // regbot:liw 925 1090 1177 1113 1046 875 928 1114
 // regbot:liw
-bool ULineSensor::decode(char *msg)
+bool UIrSensor::decode(char *msg)
 { // catch all messages starting with '#'
     // from any source
     bool used = true;
     const char *p1 = strchrnul(msg, ':');
-    if (strncmp(p1, ":livn ", 6) == 0)
+    if (strncmp(p1, ":ir ", 4) == 0)
     { // decode line sensor message
 
         // advance to first parameter
-        if (strlen(p1) > 6)
-            p1 += 6;
+        if (strlen(p1) > 4)
+            p1 += 4;
         else
             return false;
 
         // get data
         dataLock.lock();
         // time in seconds
-        L1 = (int)strtol(p1, (char **)&p1, 10); // L1
-        L2 = (int)strtol(p1, (char **)&p1, 10); // L2
-        L3 = (int)strtol(p1, (char **)&p1, 10); // L3
-        L4 = (int)strtol(p1, (char **)&p1, 10); // L4
-        L5 = (int)strtol(p1, (char **)&p1, 10); // L5
-        L6 = (int)strtol(p1, (char **)&p1, 10); // L6
-        L7 = (int)strtol(p1, (char **)&p1, 10); // L7
-        L8 = (int)strtol(p1, (char **)&p1, 10); // L8
+    var1 = (int)strtol(p1, (char **)&p1, 10); // var1
+    var2 = (int)strtol(p1, (char **)&p1, 10); // var2
+    var3 = (int)strtol(p1, (char **)&p1, 10); // var3
+    var4 = (int)strtol(p1, (char **)&p1, 10); // var4
+    var5 = (int)strtol(p1, (char **)&p1, 10); // var5
+    var6 = (int)strtol(p1, (char **)&p1, 10); // var6
+    var7 = (int)strtol(p1, (char **)&p1, 10); // var7
+    var8 = (int)strtol(p1, (char **)&p1, 10); // var8
+    var9 = (int)strtol(p1, (char **)&p1, 10); // var9
         dataLock.unlock();
     }
     else

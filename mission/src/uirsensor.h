@@ -20,8 +20,8 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE. */
 
-#ifndef ULINESENSOR_H
-#define ULINESENSOR_H
+#ifndef UIRSENSOR_H
+#define UIRSENSOR_H
 
 #include <iostream>
 #include <sys/time.h>
@@ -40,7 +40,7 @@
 using namespace std;
 // forward declaration
 
-class ULineSensor
+class UIrSensor
 {
 
 public:
@@ -52,20 +52,21 @@ public:
 
 public:
     /// x (forward), y (left), h (heading) in odometry coordinates
-    int L1,
-        L2,
-        L3,
-        L4,
-        L5,
-        L6,
-        L7,
-        L8;
+    int var1,
+        var2,
+        var3,
+        var4,
+        var5,
+        var6,
+        var7,
+        var8,
+        var9;
 
     mutex dataLock;
 };
 
 /**
  * Make this visible to the rest of the software */
-extern ULineSensor lineSensor;
+extern UIrSensor irSensor;
 
 #endif

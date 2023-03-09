@@ -28,6 +28,7 @@
 #include "ubridge.h"
 #include "upose.h"
 #include "ulinesensor.h"
+#include "uirsensor.h"
 #include "ucomment.h"
 #include "ustate.h"
 #include "uvision.h"
@@ -45,23 +46,27 @@ void UBridge::decode(char *msg)
     }
     else if (pose.decode(msg))
     {
-        std::cout << "pose decode worked: " << msg << "\n";
+        // std::cout << "pose decode worked: " << msg << "\n";
     }
     else if (lineSensor.decode(msg))
     {
         std::cout << "lineSensor decode worked: " << msg << "\n";
     }
+    else if (irSensor.decode(msg))
+    {
+        // std::cout << "irSensor decode worked: " << msg << "\n";
+    }
     else if (state.decode(msg))
     {
-        std::cout << "state decode worked: " << msg << "\n";
+        // std::cout << "state decode worked: " << msg << "\n";
     }
     else if (event.decode(msg))
     {
-        std::cout << "event decode worked: " << msg << "\n";
+        // std::cout << "event decode worked: " << msg << "\n";
     }
     else if (joy.decode(msg))
     {
-        std::cout << "joy decode worked: " << msg << "\n";
+        // std::cout << "joy decode worked: " << msg << "\n";
     }
     else
         printf("Received, but not used: %s\n", msg);

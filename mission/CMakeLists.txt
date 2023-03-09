@@ -13,7 +13,8 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 add_executable(mission main.cpp 
                             src/ubridge.cpp 
                             src/upose.cpp 
-                            src/ulinesensor.cpp 
+                            src/ulinesensor.cpp
+                            src/uirsensor.cpp 
                             src/ucomment.cpp 
                             src/ustate.cpp
                             src/uvision.cpp

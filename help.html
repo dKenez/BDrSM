@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p><span style=" font-size:20pt;">
+            Mission setup</span></p>
+            <p>See also the <a href="http://rsewiki.elektro.dtu.dk/index.php/Mission">REGBOT wiki page</a> for more details</p>
+            <p>Mission specification consist of mission lines,
+               each line consist of two (lower case) parts divided by a ':'</p>
+            <p><b>drive values : continue conditions</b>  (conditions are OR'ed)</p>
+            <p>e.g.:<br/> vel=-0.2 : dist=1.2, time=6<br />
+            Drive backwards at 0.2m/s for 1.2 meter or max 6 seconds.</p>
+            
+            <p>
+            <b>Drive values</b><br />
+            VEL is velocity in m/s - positive is forward.<br/>
+            ACC is acceleration limit in m/s2.<br/>
+            TOPOS is target position for this missionline + is forward (vel is max vel).<br/>
+            TR is turnradius in metre - always positive.<br/>
+            EDGER, EDGEL follow Right/Left edge of line at -2..2 (in cm).<br/>
+            WHITE set to 1 if follow-line tape is white, else black.<br/>
+            LOG is log interval in milliseconds.<br/>
+            BAL is balancing, uses last value if omitted.<br/>
+            IRSENSOR is IR-sensor to use for control (1=Wall, 2=Velocity).<br/>
+            IRDist is IR-distance to hold (selsor 1 to wall, sensor 2 to leader).<br/>
+            HEAD sets the reference heading in pose coordinates.<br/>
+            SERVO servo (1..5), PSERVO position (-1000..1000), VSERVO servo speed 0=full,1=slow 300=fast.<br/>
+            LABEL label number that can be used by GOTO.<br />
+            GOTO is a jump to the label number given. Can be limited by COUNT or any other condition.<br/>
+            EVENT generate an event 0..31, event=0 means stop mission.<br/>
+            CHIRP may be used to make a frequency scan with this amplitude, LOG must be > 3 (samples per cycle).<br/>
+            <b>Continue conditions</b><br />
+            DIST driven distance in this mission line - positive meters.<br/>
+            VEL  robot velocity (positive is forward).<br/>
+            TURN angle turned (max) - degrees, positive is CCV.<br />
+            HEAD absolute angle in degrees, can be used with '=' within +/-3 deg, &lt;, &gt; (beware of 180 deg folding).<br/>
+            TIME max time in this mission line - positive seconds<br />
+            COUNT used with GOTO, GOTO is skipped when count is reached.<br />
+            XL crossing line, value is 0..20, use '=', '&lt;' or '&gt;'<br />
+            LV line valid confidence 0..20 (0=no line, increase on detect up to 20), use '=', '&lt;' or '&gt;'<br/>
+            IR1, IR2 distance from side IR sensor.<br/>
+            TILT tilt angle (0 is balance point).<br/>
+            LAST condition that ended last line with a condition.<br/>
+            EVENT test for event.<br/>
+            If no condition, then continues right away.<br/>
+            </p>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
