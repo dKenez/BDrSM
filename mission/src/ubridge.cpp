@@ -42,7 +42,7 @@ void UBridge::decode(char *msg)
 { /// ask all if they can use this message
     if (comment.decode(msg))
     {
-        std::cout << "comment decode worked: " << msg << "\n";
+        // std::cout << "comment decode worked: " << msg << "\n";
     }
     else if (pose.decode(msg))
     {
@@ -50,7 +50,7 @@ void UBridge::decode(char *msg)
     }
     else if (lineSensor.decode(msg))
     {
-        std::cout << "lineSensor decode worked: " << msg << "\n";
+        // std::cout << "lineSensor decode worked: " << msg << "\n";
     }
     else if (irSensor.decode(msg))
     {
