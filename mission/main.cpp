@@ -77,37 +77,34 @@ bool setup(int argc, char **argv)
 void step1()
 {
 
-    std::ifstream input("first_mission.txt");
+    cout<<"step 1"<<"\n";
+
+
+    sound.say(". Step one.", 0.3);
+    // remove old mission
+    bridge.tx("regbot mclear\n");
+    // clear events received from last mission
+    event.clearEvents();
+    // add mission lines
+
+    std::ifstream input("./static/first_mission.txt");
     std::string line;
 
+
     while( std::getline( input, line ) ) {
-        std::cout<<line<<'\n';
+        std::string message = "regbot madd " + line + "\n";
+        
+        cout << message;
+        bridge.tx(message.c_str());
     }
 
-    // sound.say(". Step one.", 0.3);
-    // // remove old mission
-    // bridge.tx("regbot mclear\n");
-    // // clear events received from last mission
-    // event.clearEvents();
-    // // add mission lines
-    // //following line mission
-    // //thread=1
-    // //vel=0.4: dist=0.1
-    // //vel=0.6: lv=20,dist=0.5
-    // //label=1,vel=0.8, edger=0.0, white=1: lv<4
-    // //goto=2: IR1=0.5
-    // //goto=1
-    // //label=2,vel=0.0: time=0.3
-    // bridge.tx("regbot madd vel=0.2:time=1\n");
-    // bridge.tx("regbot madd tr=0.1:time=1,turn=-90\n");
-    // bridge.tx("regbot madd :time=1\n");
-    // // start this mission
-    // bridge.tx("regbot start\n");
-    // // wait until finished
-    // //
-    // cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
-    // event.waitForEvent(0);
-    // //   sound.say(". Step one finished.");
+    // start this mission
+    bridge.tx("regbot start\n");
+    // wait until finished
+    //
+    cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
+    event.waitForEvent(0);
+    //   sound.say(". Step one finished.");
 }
 
 void step2()
