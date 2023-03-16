@@ -87,7 +87,7 @@ void step1()
     event.clearEvents();
     // add mission lines
 
-    std::ifstream input("./static/first_mission.txt");
+    std::ifstream input("./static/1_mission.txt");
     std::string line;
 
 
@@ -109,42 +109,35 @@ void step1()
 
 void step2()
 {
-    //   sound.say(". Step two. Press button two for right, button three for left", 0.3);
-    bool go_left = true;
-    while (true)
-    { // wait for decision (button 2 (right) or 3 (left))
-        if (joy.button(2))
-        {
-            go_left = false;
-            sound.say(". OK. Going right.", 0.3);
-            break;
-        }
-        else if (joy.button(3))
-        {
-            go_left = true;
-            sound.say(". OK. Going left.", 0.3);
-            break;
-        }
-        else // wait
-            usleep(5000);
-    }
+
+
+    cout<<"step 1"<<"\n";
+
+
+    sound.say(". Step one.", 0.3);
     // remove old mission
     bridge.tx("regbot mclear\n");
     // clear events received from last mission
     event.clearEvents();
     // add mission lines
-    if (go_left)
-        bridge.tx("regbot madd vel=0.2,tr=0.1:turn=90\n");
-    else
-        bridge.tx("regbot madd vel=0.2,tr=0.1:turn=-90\n");
-    // drive a bit straight for correct end heading
-    bridge.tx("regbot madd :dist=0.2\n");
+
+    std::ifstream input("./static/2_mission.txt");
+    std::string line;
+
+
+    while( std::getline( input, line ) ) {
+        std::string message = "regbot madd " + line + "\n";
+        
+        cout << message;
+        bridge.tx(message.c_str());
+    }
+
     // start this mission
     bridge.tx("regbot start\n");
     // wait until finished
-    cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
+    //
+    cout << "Waiting for step 2 to finish (event 0 is send, when mission is finished)\n";
     event.waitForEvent(0);
-    sound.say(". Step two finished.");
 }
 
 void step3()
@@ -186,68 +179,6 @@ void step4()
     event.waitForEvent(0);
     //   sound.say(". Step one finished.");
 }
-void linefollow()
-{
-    cout << "Line Follow\n";
-
-    int i = 0;
-    while (i < 20)
-    {
-        i += 1;
-        // // remove old mission
-        // bridge.tx("regbot mclear\n");
-        // // clear events received from last mission
-        // event.clearEvents();
-
-        float sum = lineSensor.L1 - 250 +
-                    lineSensor.L2 - 250 +
-                    lineSensor.L3 - 250 +
-                    lineSensor.L4 - 250 +
-                    lineSensor.L5 - 250 +
-                    lineSensor.L6 - 250 +
-                    lineSensor.L7 - 250 +
-                    lineSensor.L8 - 250;
-        float weightedAvg = 1 * lineSensor.L1 - 250 +
-                            2 * lineSensor.L2 - 250 +
-                            3 * lineSensor.L3 - 250 +
-                            4 * lineSensor.L4 - 250 +
-                            5 * lineSensor.L5 - 250 +
-                            6 * lineSensor.L6 - 250 +
-                            7 * lineSensor.L7 - 250 +
-                            8 * lineSensor.L8 - 250;
-        weightedAvg /= sum;
-
-        if (weightedAvg >= 1 && weightedAvg < 3)
-        {
-        }
-        else if (weightedAvg >= 3 && weightedAvg < 4)
-        {
-        }
-        else if (weightedAvg >= 4 && weightedAvg < 5)
-        {
-        }
-        else if (weightedAvg >= 5 && weightedAvg < 6)
-        {
-        }
-        else if (weightedAvg >= 6 && weightedAvg < 8)
-        {
-        }
-        else
-        {
-            cout << "out of range: " << weightedAvg << "\n";
-        }
-            cout << "weighted avg: " << weightedAvg << "\n";
-        // bridge.tx("regbot madd vel=0.2,tr=0.1:turn=-90\n");
-        // // drive a bit straight for correct end heading
-        // bridge.tx("regbot madd :dist=0.2\n");
-        // // start this mission
-        // bridge.tx("regbot start\n");
-        // // wait until finished
-        // cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
-        // event.waitForEvent(0);
-        sound.say(". Step two finished.");
-    }
-}
 
 int main(int argc, char **argv)
 {
@@ -255,8 +186,8 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        step1();
-        // step2();
+        // step1();
+        step2();
         // step3();
         // step4();
         //

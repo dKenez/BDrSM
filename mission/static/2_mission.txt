@@ -1,0 +1,7 @@
+# turn 90 degrees at end of racetrack
+tr=0:turn=-90
+vel=0.6:ir2<0.4
+tr=0:turn=-90
+vel=0.3:dist=1
+
+
