@@ -1,7 +1,35 @@
-# turn 90 degrees at end of racetrack
+# go to target and turn around then do the tunnel
+
+vel=0.0: time=1.1
+vel=0.4: dist=0.1
+vel=0.6: lv=20, dist=0.3
+vel=0.8, edger=0.0, white=1: ir2<0.3
+tr=0:turn=185
+vel=0:time=0
+vel=0.2, edger=0.0, white=1: dist=0.2
 tr=0:turn=-90
-vel=0.6:ir2<0.4
-tr=0:turn=-90
-vel=0.3:dist=1
+vel=0.3: ir2<0.22
+tr=0.1:turn=-90
+vel=0.7: dist=0.3
+tr=0.3:turn=175
+vel=0.5:dist=0.2
+vel=1:ir1>0.5
+vel=0.3:dist=0.1
+
+tr=0.3:turn=-175
+vel=0.5:dist=0.75
+tr=0.3:turn=-90
+vel=1:dist=0.7
+tr=0.3:turn=-95
+vel=1:dist=0.8
+#tr=0.1:turn=10
+#vel=0.5: lv=20
 
 
+
+# go to tunnel
+tr=0:turn=10
+vel=0.3: lv=20
+#vel=0.5, edger=0.0, white=1: dist=0.3
+#tr=0:turn=-95
+#vel=0.5: ir2<0.3
