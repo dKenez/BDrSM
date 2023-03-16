@@ -77,8 +77,8 @@ bool setup(int argc, char **argv)
 void step1()
 {
 
-    cout << "step 1"
-         << "\n";
+    cout<<"step 1"<<"\n";
+
 
     sound.say(". Step one.", 0.3);
     // remove old mission
@@ -90,16 +90,12 @@ void step1()
     std::ifstream input("./static/first_mission.txt");
     std::string line;
 
-    while (std::getline(input, line))
-    {
 
-        char *cline = line.data();
-        if (!strncmp(cline, "#", 1))
-        {
-            std::string message = "regbot madd " + line + "\n";
-            cout << message;
-            bridge.tx(message.c_str());
-        }
+    while( std::getline( input, line ) ) {
+        std::string message = "regbot madd " + line + "\n";
+        
+        cout << message;
+        bridge.tx(message.c_str());
     }
 
     // start this mission
@@ -240,7 +236,7 @@ void linefollow()
         {
             cout << "out of range: " << weightedAvg << "\n";
         }
-        cout << "weighted avg: " << weightedAvg << "\n";
+            cout << "weighted avg: " << weightedAvg << "\n";
         // bridge.tx("regbot madd vel=0.2,tr=0.1:turn=-90\n");
         // // drive a bit straight for correct end heading
         // bridge.tx("regbot madd :dist=0.2\n");
