@@ -104,6 +104,36 @@ void step1()
     event.waitForEvent(0);
 }
 
+void step(std::string mission_file)
+{
+    cout <<"step: " << mission_file << "\n";
+
+    // remove old mission
+    bridge.tx("regbot mclear\n");
+
+    // clear events received from last mission
+    event.clearEvents();
+
+    // read mission lines from file
+    std::ifstream input("./static/" + mission_file + ".txt");
+    std::string line;
+
+    // add mission lines
+    while( std::getline( input, line ) ) {
+        std::string message = "regbot madd " + line + "\n";
+        
+        cout << message;
+        bridge.tx(message.c_str());
+    }
+
+    // start this mission
+    bridge.tx("regbot start\n");
+    // wait until finished
+    //
+    cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
+    event.waitForEvent(0);
+}
+
 void step2()
 {
     cout<<"step 2"<<"\n";
@@ -180,8 +210,9 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        step1();
-        step2();
+        step("guillotine_ramp");
+        // step1();
+        // step2();
         // step3();
         // step4();
         //
