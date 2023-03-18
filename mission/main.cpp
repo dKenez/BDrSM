@@ -183,6 +183,7 @@ int main(int argc, char **argv)
         step("guillotine_ramp");
         step("axe");
         step("racetrack");
+        step("roundabout");
         // step1();
         // step2();
         // step3();
