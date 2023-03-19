@@ -106,8 +106,9 @@ bool setup(int argc, char **argv)
 
 void step(std::string mission_file)
 {
-    cout <<"step: " << mission_file << "\n";
+    cout << "step: " << mission_file << "\n";
 
+    event.clearEvents();
     // remove old mission
     bridge.tx("regbot mclear\n");
 
@@ -130,7 +131,7 @@ void step(std::string mission_file)
     bridge.tx("regbot start\n");
     // wait until finished
     //
-    cout << "Waiting for step 1 to finish (event 0 is send, when mission is finished)\n";
+    cout << "Waiting for step : " << mission_file << " to finish (event 0 is send, when mission is finished)\n";
     event.waitForEvent(0);
 }
 
@@ -180,12 +181,13 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        step("guillotine_ramp");
-        step("axe");
-        step("racetrack");
-        step("goto_roundabout");
+        step("mission_blob");
+        // step("guillotine_ramp");
+        // step("axe");
+        // step("racetrack");
+        // step("goto_roundabout");
         // step("roundabout_start_debug");
-        step("roundabout");
+        // step("roundabout");
         //
         std::cout << "# Robobot mission finished ...\n";
         // remember to close camera
