@@ -1,14 +1,10 @@
-vel=0.0:time=1.1
+# wait for regbot
+vel=0.0: ir2<0.6
+vel=0.0: ir2>0.6
+vel=0.0: time=1
 
-# go to main track
-vel=0.4, tr=0.2: turn=-105
-vel=0.4:dist=0.1
+# go onto track
 vel=0.4:lv=20,dist=2
 vel=0.4: dist=0.1
-vel=0.4, tr=0: turn=90
-
-# go to roundabout
-vel=0.5, edger=0.0, white=1: lv<4
-vel=0.4:lv=20,dist=0.5
-vel=0.5, edger=0.0, white=1: lv<4, xl>15
-tr=0.0: turn=55
+tr=0:turn=55, lv=20
+vel=0.4, edger=0, white=1: dist=0.6

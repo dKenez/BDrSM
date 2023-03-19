@@ -180,14 +180,12 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        step("guillotine_ramp");
-        step("axe");
-        step("racetrack");
+        // step("guillotine_ramp");
+        // step("axe");
+        // step("racetrack");
+        // step("goto_roundabout");
+        step("roundabout_start_debug");
         step("roundabout");
-        // step1();
-        // step2();
-        // step3();
-        // step4();
         //
         std::cout << "# Robobot mission finished ...\n";
         // remember to close camera
