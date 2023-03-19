@@ -3,6 +3,3 @@ vel=0.2:dist=0.1
 tr=0:turn=-90
 vel=0.0:time=0.2
 vel=1.5,edger=0, white=1:lv<4
-
-# remaining logic
-vel=0.0:time=0.0
