@@ -1,9 +1,11 @@
 vel=0.0:time=0.1
 
+
 # go to main track
-vel=0.4, tr=0.2: turn=-105
+vel=-0.4: dist=0.1
+vel=0.4, tr=0.2: turn=-90
 vel=0.4:dist=0.1
-vel=0.4:lv=20,dist=2
+vel=0.4:lv>12,dist=2
 vel=0.4: dist=0.1
 vel=0.4, tr=0: turn=90
 
