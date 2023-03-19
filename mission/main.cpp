@@ -91,7 +91,7 @@ bool setup(int argc, char **argv)
 //     // add mission lines
 //     while( std::getline( input, line ) ) {
 //         std::string message = "regbot madd " + line + "\n";
-        
+
 //         cout << message;
 //         bridge.tx(message.c_str());
 //     }
@@ -120,11 +120,14 @@ void step(std::string mission_file)
     std::string line;
 
     // add mission lines
-    while( std::getline( input, line ) ) {
-        std::string message = "regbot madd " + line + "\n";
-        
-        // cout << message;
-        bridge.tx(message.c_str());
+    while (std::getline(input, line))
+    {
+        if (line.front() != '#')
+        {
+            std::string message = "regbot madd " + line + "\n";
+            // cout << message;
+            bridge.tx(message.c_str());
+        }
     }
 
     // start this mission
@@ -181,13 +184,13 @@ int main(int argc, char **argv)
     { // start mission
         std::cout << "# Robobot mission starting ...\n";
         //
-        step("mission_blob");
-        // step("guillotine_ramp");
-        // step("axe");
-        // step("racetrack");
-        // step("goto_roundabout");
-        // step("roundabout_start_debug");
-        // step("roundabout");
+        // step("mission_blob");
+        step("guillotine_ramp");
+        step("axe");
+        step("racetrack");
+        step("goto_roundabout");
+        step("roundabout_start_debug");
+        step("roundabout");
         //
         std::cout << "# Robobot mission finished ...\n";
         // remember to close camera
