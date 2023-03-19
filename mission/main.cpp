@@ -189,7 +189,7 @@ int main(int argc, char **argv)
         step("axe");
         step("racetrack");
         step("goto_roundabout");
-        step("roundabout_start_debug");
+        // step("roundabout_start_debug");
         step("roundabout");
         //
         std::cout << "# Robobot mission finished ...\n";
