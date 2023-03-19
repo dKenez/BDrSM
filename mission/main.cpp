@@ -108,7 +108,6 @@ void step(std::string mission_file)
 {
     cout << "step: " << mission_file << "\n";
 
-    event.clearEvents();
     // remove old mission
     bridge.tx("regbot mclear\n");
 
