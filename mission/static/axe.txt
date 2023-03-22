@@ -5,8 +5,10 @@ vel=0.6: lv=20,dist=0.5
 vel=0.5, edger=0.0, white=1: xl>15
 tr=0:turn=-95
 vel=0.6, edger=0.0, white=1: lv<4
-tr=0:turn=-90,lv=20
-vel=0.6, edger=0.0, white=1: dist=0.6
+vel=0: time=0.25
+vel=0.4, tr=0.0:turn=-70,lv=20
+vel=0.4:dist=0.3,lv=20
+vel=0.6, edger=0.0, white=1: dist=0.45
 
 # wait for axe and go
 vel=0.0: ir2<0.4
