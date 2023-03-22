@@ -191,6 +191,7 @@ int main(int argc, char **argv)
         // step("roundabout_start_debug");
         step("roundabout");
         //
+        step("go_to_tunnel");
         std::cout << "# Robobot mission finished ...\n";
         // remember to close camera
         vision.stop();
