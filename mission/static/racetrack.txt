@@ -1,6 +1,6 @@
 # turn onto track, do race
 vel=0.2:dist=0.05
 vel=0:time=0.5
-vel=0.2, tr=0:turn=-90, lv=20
+vel=0.4, tr=0:turn=-90
 vel=0:time=0.5
 vel=1.1,edger=0, white=1:lv<4
