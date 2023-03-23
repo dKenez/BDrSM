@@ -13,9 +13,9 @@ vel=0.0:time=0.1
 vel=-0.4:dist=0.2
 vel=-0.3:dist=0.73
 vel=0.0:time=0.1
-vel=0.4, tr=0:turn=-85
+vel=0.4, tr=0:turn=-83
 vel=0.0:time=0.1
-vel=0.4, tr=0.33:turn=-360
+vel=0.4, tr=0.335:turn=-360
 tr=0:turn=95
 vel=0.4:dist=0.2
 
