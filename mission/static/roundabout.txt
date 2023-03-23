@@ -28,4 +28,4 @@ vel=0.4: dist=0.1
 vel=0.4: dist=1.5, lv=20
 vel=0.2:dist=0.05
 tr=0:turn=-90
-vel=0.5, edger=0, white=1, irsensor=2, irdist=2: dist=7
+vel=0.5, edger=0, white=1: dist=7
