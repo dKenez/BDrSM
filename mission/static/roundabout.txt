@@ -13,19 +13,19 @@ vel=0.0:time=0.1
 vel=-0.4:dist=0.2
 vel=-0.3:dist=0.73
 vel=0.0:time=0.1
-vel=0.4, tr=0:turn=-83
+vel=0.4, tr=0:turn=-81
 vel=0.0:time=0.1
-vel=0.4, tr=0.335:turn=-360
+vel=0.4, tr=0.345:turn=-360
 tr=0:turn=95
 vel=0.4:dist=0.2
 
 vel=0.0: ir2<0.6
 vel=0.0: ir2>0.6
-vel=0:time=5
+vel=0:time=6
 
 vel=0.4: dist=0.1
 #tr=0.2: turn=105
 vel=0.4: dist=1.5, lv=20
 vel=0.2:dist=0.05
 tr=0:turn=-90
-vel=0.5, edger=0, white=1: dist=7
+vel=0.4, edger=0, white=1: dist=7
