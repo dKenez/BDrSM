@@ -21,7 +21,7 @@ vel=0.4:dist=0.2
 
 vel=0.0: ir2<0.6
 vel=0.0: ir2>0.6
-vel=0:time=6
+vel=0:time=9
 
 vel=0.4: dist=0.1
 #tr=0.2: turn=105
