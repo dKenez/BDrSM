@@ -184,7 +184,7 @@ int main(int argc, char **argv)
         std::cout << "# Robobot mission starting ...\n";
         //
         // step("mission_blob");
-        step("ir_test")
+        step("ir_test");
         // step("guillotine_ramp");
         // step("axe");
         // step("racetrack");
