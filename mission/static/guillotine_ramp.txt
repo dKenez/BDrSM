@@ -10,6 +10,6 @@ vel=0.5, tr=0:turn=180
 vel=0.5, edger=0.0, white=1: xl>15, dist=1.2
 vel=0.5, tr=0: turn=90
 vel=0.8, edger=0.0, white=1: tilt>-0.05
-vel=0.4, edger=0.0, white=1: ir2<0.4
+vel=0.4, edger=0.0, white=1: ir2<0.4, dist=0.2
 vel=0: time=0.2
 vel=0.5, tr=0:turn=180
