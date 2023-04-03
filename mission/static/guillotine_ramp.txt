@@ -1,34 +1,15 @@
-# go to target and turn around
 vel=0.0: time=1
-
-# move forward with vel 0.4 for a distance of 0.1m
 vel=0.4: dist=0.1
-
-# move forward with vel 0.6 untill a white line is detected or upto a maximum distance of 0.5m (first right turn to cross the guillotine)
 vel=0.6: lv=20,dist=0.5
-
-# move forward along the white line with velocity 0.8 directly along the right edge till tilt becomes less than -0.2 (up the ramp)
 vel=0.8, edger=0.0, white=1: tilt<-0.2
-
-
-# move forward along the white line with velocity 0.8 directly along the right edge till tilt becomes greater than -0.05 (down the ramp)
 # vel=0.8, edger=0.0, white=1: tilt>-0.05
-
-# move along the white line up the ramp and follow the line till a crossing is detected
 vel=0.8, edger=0.0, white=1: xl>15
-
-# turn 90 degrees to the left
 vel=0.5, tr=0: turn=90
-
-# move forward a distance of 0.3m (change when vison is ready)
-vel=0.5, edger=0.0, white=1: dist=0.3
+vel=0.5, edger=0.0, white=1: dist=1
 vel=0.5, tr=0:turn=180
-vel=0.5, edger=0.0, white=1: xl>15, dist=0.5
+vel=0.5, edger=0.0, white=1: xl>15, dist=1.2
 vel=0.5, tr=0: turn=90
-
-
-#  move forward along the white 
-vel=0.8, edger=0.0, white=1: dist=1.2
-vel=0.8, edger=0.0, white=1: ir2<0.3
+vel=0.8, edger=0.0, white=1: tilt>-0.05
+vel=0.4, edger=0.0, white=1: ir2<0.4
 vel=0: time=0.2
 vel=0.5, tr=0:turn=180
