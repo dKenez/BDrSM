@@ -2,7 +2,7 @@ vel=0.0:time=0.1
 
 
 # go to main track
-vel=-0.4: dist=0.5
+# vel=-0.4: dist=0.5
 vel=0.0:time=0.1
 vel=0.4, tr=0.2: turn=-90
 vel=0.4:dist=0.1
