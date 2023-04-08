@@ -1,31 +1,35 @@
 # wait for regbot
 vel=0: time=0.5
-vel=0.0: ir2<0.13
-vel=0.0: ir2>0.15
+vel=0.0: ir2<0.16
+vel=0.0: ir2>1
 vel=0.0: time=1
-vel=0.5, tr=0.0: turn=-90, lv=20
-vel=0.5, edger=0.0, white=1: lv<4, xl>15
-vel=0.5:dist=0.1
+vel=0.3, tr=0.0: turn=-70, lv=20
+vel=0.3, edger=0.0, white=1:  xl>15
+vel=0.35:dist=0.2
 vel=0.0:time=0.1
-vel=0.5, tr=0.1: turn=-85
+vel=0.4, tr=0.1: turn=-85
 vel=0.0:time=0.1
 
-vel=-0.4:dist=0.32
-vel=-0.3:dist=0.73
+vel=-0.3:dist=0.32
+vel=-0.4:dist=0.675
 vel=0.0:time=0.1
-vel=0.4, tr=0:turn=-87
+vel=0.3, tr=0:turn=-87
 vel=0.0:time=0.1
-vel=0.4, tr=0.345:turn=-360
+vel=0.4, tr=0.34:turn=-360
 tr=0:turn=95
-vel=0.4:dist=0.2
+vel=0.3:dist=0.3
 
-#vel=0.0: ir2<0.6
-#vel=0.0: ir2>0.6
-#vel=0:time=9
+vel=0.0: ir2<0.2
+vel=0.0: ir2>0.25
+vel=0:time= 4
 
-#vel=0.4: dist=0.1
+vel=0.4: dist=0.1
 #tr=0.2: turn=105
-#vel=0.4: dist=1.5, lv=20
+vel=0.4: dist=1.5, lv=20
+vel=0.4: dist=0.2
+vel=0.4: dist=1.5, lv=20
+vel=0.4:dist=0.15
+tr=0:turn=-135
 #vel=0.2:dist=0.05
 #tr=0:turn=-90
-#vel=0.4, edger=0, white=1: dist=7
+vel=0.4, edger=0, white=1: dist=2

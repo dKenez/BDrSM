@@ -1,22 +1,20 @@
-# go to axe
 vel=0.0:time=0.2
 vel=0.5: lv=20,dist=0.5
-vel=0.6: lv=20,dist=0.5
-vel=0.5, edger=0.0, white=1: xl>15
-tr=0:turn=-95
-vel=0.6, edger=0.0, white=1: lv<4
-vel=0: time=0.25
-vel=0.4, tr=0.0:turn=-70,lv=20
+vel=0.3, edger=0.0, white=1: xl>15
+vel=0.5:dist=0.1
+tr=0:turn=-110
+vel=0.3:dist=0.3
+vel=0.3, white=1, edger=0: dist=0.35
+vel=0.4, tr=0.0:turn=-70
 vel=0.4:dist=0.3,lv=20
-vel=0.6, edger=0.0, white=1: dist=0.45
+vel=0.6, edger=0.0, white=1: dist=0.7
 
 # wait for axe and go
-#vel=0.0: ir2<0.4
-vel=0.0: ir2<0.15
+vel=0.0: ir2>0.3
+vel=0.0: ir2<0.16
 vel=0.0: time=0.3
 vel=0.5, edger=0.0, white=1: lv<4
 
 # go until end of line then find racetrack line
 vel=0.4:dist=0.1
 vel=0.4:lv=20,dist=2
-			
