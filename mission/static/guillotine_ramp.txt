@@ -1,13 +1,15 @@
-# go to target and turn around
-vel=0.0: time=1
+vel=0.0: time=1.0
 vel=0.4: dist=0.1
-vel=0.6: lv=20,dist=0.5
-vel=0.8, edger=0.0, white=1: tilt>0.15
-vel=0.8, edger=0.5, white=1: tilt<0.05
-vel=0.5, tr=0:turn=10
+vel=0.6: dist=0.5, lv=20
+vel=0.5, edger=0, white=1: tilt>0.15
+vel=0:time=0.2
+vel=0.5, tr=0: turn=-10
+vel=0.4, edger=0.0, white=1: tilt<0.05, lv<4
+vel=0.0: time=0.2
+vel=0.5, tr=0.0: turn=-10.0, lv=20
 vel=0.8, edger=0.0, white=1: tilt<-0.2
 vel=0.8, edger=0.0, white=1: tilt>-0.05
 vel=0.8, edger=0.0, white=1: dist=1.2
 vel=0.3, edger=0.0, white=1: ir2<0.3
-vel=0: time=0.2
-vel=0.5, tr=0:turn=180
+vel=0.0: time=0.2
+vel=0.5, tr=0.0: turn=180.0
