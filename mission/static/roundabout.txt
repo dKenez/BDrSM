@@ -10,7 +10,7 @@ vel=0.35: dist=0.3
 vel=0.0: time=0.1
 vel=0.4, tr=0.0: turn=-80.0
 vel=0.0: time=0.1
-vel=-0.4: dist=0.2
+vel=-0.5: dist=0.2
 vel=-0.3: dist=0.7
 vel=0.0: time=0.1
 vel=0.3, tr=0.0: turn=-87.0
