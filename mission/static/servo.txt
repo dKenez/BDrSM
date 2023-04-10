@@ -1,9 +1,7 @@
-thread=1
-  label=20,servo=1,pservo=-300:time=1
-  servo=1, pservo=200, vservo=0:time=1
-  goto=20 : count=0
-  servo=1, pservo=2000
-  label=40,servo=2,pservo=-200:time=2
-  servo=2, pservo=-1000, vservo=0:time=2
-  goto=40 : count =0
+  servo=2, pservo=100: time=1
+  servo=1,pservo=300:time=1
+  servo=1, pservo=-650, vservo=70:time=15
+  servo=2,pservo=200:time=1
+  servo=2, pservo=550, vservo=0:time=1
   servo=2, pservo= 2000
+  servo=1, pservo=100
