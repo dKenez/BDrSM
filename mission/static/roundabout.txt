@@ -1,30 +1,37 @@
-
+servo=1, pservo=900: time=1.0
+servo=2, pservo=650: time=1.0
 vel=0.0: time=0.5
-vel=0.0: ir2<0.16
+vel=0.0: ir2<0.13
 vel=0.0: ir2>1.0
 vel=0.0: time=1.0
-vel=0.3, tr=0.0: turn=-60.0,lv=20
+vel=0.3, tr=0.0: turn=-70.0
 vel=0.0: time=1.0
 vel=0.3, edger=0.0, white=1: xl>14
-vel=0.35: dist=0.3
-vel=0.0: time=0.1
+vel=0.35, edger=0.0: dist=0.4
+vel=0.0: time=0.2
 vel=0.4, tr=0.0: turn=-80.0
 vel=0.0: time=0.1
-vel=-0.4: dist=0.2
-vel=-0.5: dist=0.7
+vel=-0.4: dist=0.225
+vel=-0.6: dist=0.725
 vel=0.0: time=0.1
 vel=0.3, tr=0.0: turn=-87.0
 vel=0.0: time=0.1
-vel=0.4, tr=0.33: turn=-360.0
+vel=0.4, tr=0.345: turn=-360.0
 tr=0.0: turn=95.0
-vel=0.3: dist=0.3
+vel=0.3: dist=0.2
 vel=0.0: ir2<0.2
 vel=0.0: ir2>0.25
-vel=0.0: time=4.0
+vel=0.0: time=6.0
 vel=0.4: dist=0.1
 vel=0.4: dist=1.5, lv=20
-vel=0.4: dist=0.2
-vel=0.4: dist=1.5, lv=20
-vel=0.4: dist=0.15
 tr=0.0: turn=-145.0
-vel=0.4, edger=0.0, white=1: dist=2.0
+vel=0.4, edger=0.0, white=1: dist=7.6
+tr=0: turn=90
+vel=0.3: dist=0.3
+vel=0.2:dist=2,lv=20
+#vel=0.2 :dist=0.1
+#vel=0:time=0.5
+#vel=0.4, tr=0:turn=-75
+vel=0.4, edger=0.0, white=1: dist=7.5, lv<4
+vel=0.4 :dist=0.2
+vel=0.3, edger=0.0, white=1: dist=3.5, ir2<0.3
