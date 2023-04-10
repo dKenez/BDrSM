@@ -1,3 +1,4 @@
+servo=1, pservo=-300: time=1.0
 vel=0.0: time=1.0
 vel=0.4: dist=0.1
 vel=0.6: dist=0.5, lv=20
