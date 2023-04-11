@@ -1,0 +1,22 @@
+servo=1, pservo=600: time=1.0
+servo=2, pservo=-100, vservo=0: time=1.0
+vel=0.3, edgel=0.0, white=1: tilt>0.1
+vel=0: time=0.5
+vel=0.5, edgel=0.0, white=1: tilt<0.05
+vel=0: time=0.5
+vel=0.2, edgel=0.0, white=1:dist=1.47
+vel=0: time=0.5
+vel=0.5, tr=0: turn=-75
+vel=0: time=0.5
+servo=1, pservo=-700, vservo=50:time=30
+vel=0: time=0.5
+vel=0.2: dist=0.09
+vel=0: time=0.5
+servo=2, pservo=550, vservo=50: time=10
+vel=0: time=0.5
+servo=1, pservo=-650, vservo=70:time=5
+vel=0: time=0.5
+vel=-0.2: dist=0.2
+vel=0.5, tr=0: turn=-125
+vel=0.3:dist=1.2
+servo=2, pservo=300, vservo=0: time=10
