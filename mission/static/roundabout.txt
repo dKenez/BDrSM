@@ -16,7 +16,7 @@ vel=-0.6: dist=0.735
 vel=0.0: time=0.1
 vel=0.3, tr=0.0: turn=-87.0
 vel=0.0: time=0.1
-vel=0.4, tr=0.335: turn=-360.0
+vel=0.4, tr=0.345: turn=-360.0
 tr=0.0: turn=95.0
 vel=0.3: dist=0.2
 vel=0.0: ir2<0.2
@@ -25,7 +25,7 @@ vel=0.0: time=6.0
 vel=0.4: dist=0.1
 vel=0.4: dist=1.5, lv=20
 tr=0.0: turn=-145.0
-vel=0.4, edger=0.0, white=1: dist=7.6
+vel=0.4, edger=0.0, white=1: dist=7.8
 tr=0: turn=90
 vel=0.3: dist=0.3
 vel=0.2:dist=2,lv=20
