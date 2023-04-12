@@ -32,7 +32,7 @@ vel=0.3: dist=1.5, lv=20
 tr=0.0: turn=-120.0
 vel=0.3, edger=0.0, white=1: dist=8
 tr=0: turn=90
-vel=0.3: dist=0.3
+vel=0.3: dist=0.1
 vel=0.2:dist=2,lv=20
 #vel=0.2 :dist=0.1
 #vel=0:time=0.5
