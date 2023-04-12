@@ -189,6 +189,7 @@ int main(int argc, char **argv)
         //step("axe");
         step("file2");
         step("file3");
+        step("file4");
         step("file5");
         //step("racetrack");
 
