@@ -186,15 +186,17 @@ int main(int argc, char **argv)
         // step("mission_blob");
         // step("ir_test");
         step("guillotine_ramp");
-        step("axe");
-        
-        step("racetrack");
+        //step("axe");
+        step("file2");
+        step("file3");
+        step("file5");
+        //step("racetrack");
 
-        step("goto_roundabout");
+        //step("goto_roundabout");
         // step("roundabout_start_debug");
-        step("roundabout");
-        step("roundabout_to_buzzer");
-        step("go_to_tunnel");
+        //step("roundabout");
+        //step("roundabout_to_buzzer");
+        //step("go_to_tunnel");
         //step("roundabout_to_buzzer");
         // //
         // step("go_to_tunnel");
