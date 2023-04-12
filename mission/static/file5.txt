@@ -16,12 +16,12 @@ vel=0.35, edger=0.0: dist=0.45
 vel=0.0: time=0.2
 vel=0.4, tr=0.0: turn=-80.0
 vel=0.0: time=0.1
-vel=-0.4: dist=0.200
+vel=-0.4: dist=0.205
 vel=-0.6: dist=0.725
 vel=0.0: time=0.1
 vel=0.3, tr=0.0: turn=-87.0
 vel=0.0: time=0.1
-vel=0.4, tr=0.35: turn=-360.0
+vel=0.4, tr=0.355: turn=-360.0
 tr=0.0: turn=95.0
 vel=0.3: dist=0.2
 vel=0.0: ir2<0.2
