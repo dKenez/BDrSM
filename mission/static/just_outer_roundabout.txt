@@ -1,0 +1,19 @@
+vel=0.3, edger=0.0, white=1: xl>15
+vel=0.4,edger=0.0:dist=0.4
+tr=0.0: turn=70
+vel=0.0: time=0.5
+vel=0.0: ir2<0.13
+vel=0.0: ir2>0.2
+vel=0.0: time=5.0
+vel=0.4: dist=0.1
+vel=0.0: time=0.5
+vel=0.3: lv=20
+vel=0.3, white=1, edger=0.0: dist=6.45
+vel=0.4,tr=0.1: turn=90
+vel=0.4: dist=0.05
+vel=0.4:lv=20
+vel=0.0: time=0.5
+vel=0.3: lv<4
+vel=0.3:dist=0.2
+vel=0.3, edger=0.0, white=1: ir2>1
+vel=0.3, edger=0.0, white=1: dist=0.3
