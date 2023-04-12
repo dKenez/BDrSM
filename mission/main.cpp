@@ -185,14 +185,14 @@ int main(int argc, char **argv)
         //
         // step("mission_blob");
         // step("ir_test");
-        //step("guillotine_ramp");
+        step("guillotine_ramp");
         //step("axe");
-        //step("file2");
-        //step("file3");
-        //step("file4");
-        //step("file5");
+        step("file2");
+        step("file3");
+        step("file4");
+        step("file5");
         //step("racetrack");
-        step("just_outer_roundabout");
+        //step("just_outer_roundabout");
         //step("goto_roundabout");
         // step("roundabout_start_debug");
         //step("roundabout");
