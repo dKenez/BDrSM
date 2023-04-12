@@ -21,5 +21,5 @@ vel=0.4, tr=0:turn=-90
 vel=0:time=0.5
 vel=0.6,edger=0, white=1:lv<4
 vel=0.0:time=0.1
-vel=0.4: dist=0.15
+vel=0.4: dist=0.1
 
