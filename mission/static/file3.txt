@@ -9,7 +9,7 @@ vel=0.5, tr=0: turn=-95
 vel=0.2,edger=0.0, white=1:dist=2,  lv<4
 vel=0.4:dist=0.3
 vel=0:time=0.5
-vel=-0.3: dist=0.2
+vel=-0.3: dist=0.1
 vel=0: time=0.5
 vel=0.1,edger=0,white=1:dist=2, lv<4
 vel=0:time=0.5
