@@ -190,6 +190,7 @@ int main(int argc, char **argv)
         step("file2");
         step("file3");
         step("file4");
+        step("4b");
         step("file5");
         //step("racetrack");
         //step("just_outer_roundabout");
