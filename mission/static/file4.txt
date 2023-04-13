@@ -1,11 +1,12 @@
-vel=0.3, edgel=0.0, white=1: ir2>0.18
+vel=0.3, edgel=0.0, white=1: ir2>0.28
 vel=0.0:time=1
 vel=0.3,tr=0: turn=92
 vel=0.3:dist=0.4
 vel=0.3: time=15, ir2>0.8
 vel=0:time=0.5
 #turn2
-#vel=0.3: dist=0.07
+vel=0.3: dist=0.1
+vel=0:time=0.5
 vel=0.4,tr=0:turn=85
 vel=0:time=0.5
 vel=-0.7:dist=0.35
