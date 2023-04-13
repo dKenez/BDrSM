@@ -188,7 +188,7 @@ int main(int argc, char **argv)
         step("guillotine_ramp");
         //step("axe");
         step("file2");
-        step("file3");
+        step("3b");
         step("file4");
         step("4b");
         step("file5");
