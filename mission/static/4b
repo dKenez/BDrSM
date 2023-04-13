@@ -7,7 +7,7 @@ vel=-0.1:time=1
 #vel=0:time=0.5
 vel=0.2, tr=0:turn=5
 vel=0:time=0.5
-vel=0.1:dist=0.4
+vel=0.1:dist=0.3
 vel=0.3:dist=3, lv=20
 vel=0:time=0.5
 
