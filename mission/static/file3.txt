@@ -1,28 +1,30 @@
-vel=0.3, edgel=0.0, white=1: tilt>0.1
-vel=0: time=0.5
+vel=0.5, edgel=-1.0, white=1, log=50.0: tilt>0.1
+vel=0.0: time=0.5
 vel=0.5, edgel=0.0, white=1: tilt<0.05
-vel=0: time=0.5
-vel=0.3, edger=0.0, white=1:dist=3, xl>15
-vel=0: time=0.5
+vel=0.0: time=0.5
+vel=0.3, edger=0.0, white=1: dist=3.0, tilt<0.0
+vel=0.0: time=0.5
+vel=0.3, edger=0.0, white=1: dist=3.0, xl>15
+vel=0.0: time=0.5
 vel=0.2: dist=0.03
-vel=0: time=0.5
-vel=0.1, tr=0: turn=-90
-vel=0:time=1
-vel=0.1,edger=0.0, white=1:dist=2, lv=20
-vel=0:time=0.5
-vel=0.5:dist=0.35
-vel=0:time=0.5
-vel=-0.1: dist=0.1
-vel=0: time=1
-vel=0.2:dist=0.05
-vel=0.1,edger=0,white=1:dist=2
-vel=0:time=0.5
-vel=0.2:dist=2, lv=20
-vel=0:time=0.5
-vel=0.2:dist=0.05
-vel=0:time=0.5
-vel=0.4, tr=0:turn=85
-vel=0:time=0.5
+vel=0.0: time=0.5
+vel=0.1, tr=0.0: turn=-90.0
+vel=0.0: time=1.0
+vel=0.1, edger=0.0, white=1: dist=2.0, lv=20
+vel=0.0: time=0.5
+vel=0.5: dist=0.35
+vel=0.0: time=0.5
+vel=-0.1: dist=0.05
+vel=0.0: time=1.0
+vel=0.2: dist=0.05, lv=20vel=0.0: time=1.0
+vel=0.1, edger=0.0, white=1: dist=2.0
+vel=0.0: time=0.5
+vel=0.2: dist=2.0, lv=20
+vel=0.0: time=0.5
+vel=0.2: dist=0.05
+vel=0.0: time=0.5
+vel=0.4, tr=0.0: turn=85.0
+vel=0.0, log=0.0: time=0.5
 vel=0.3, edger=0.0, white=1: xl>15
 vel=0.4,edger=0.0:dist=0.4
 tr=0.0: turn=70
